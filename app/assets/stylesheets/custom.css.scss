@@ -1,0 +1,19 @@
+@import "materialize/components/color-variables";
+$primary-color: color("grey", "base") !default;
+$secondary-color: color("teal", "base") !default;
+@import "materialize";
+
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;  
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.sign-up-form {
+  padding-top: 30px;
+}

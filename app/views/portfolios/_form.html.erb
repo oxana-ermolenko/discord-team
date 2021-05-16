@@ -1,0 +1,33 @@
+<%= render 'shared/errors', obj: @portfolio %>
+
+<div class="container">
+<div class="row center sign-up-form">
+  <div class="col s12">
+    <div class="card-panel">
+    <h3 class="header"><%= @portfolio.new_record? ? "Add Portfolio" : "Edit Portfolio" %></h3>
+      <div class="row ">
+        <%= form_for(@portfolio, html: {class: "col s12"}) do |f| %>
+          <div class="row">
+            <div class="input-field col s12">
+              <%= f.text_field :name, placeholder: "Enter name", autofocus: true %> 
+              <%= f.label :name %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <%= f.text_field :description, placeholder: "Enter description" %> 
+              <%= f.label :description %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <%= f.button(@portfolio.new_record? ? '<i class="material-icons right">arrow_forward</i>Add'.html_safe : '<i class="material-icons right">arrow_forward</i>Update'.html_safe, class: "waves-effect waves-light btn right") %>
+            </div>
+          </div>
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
