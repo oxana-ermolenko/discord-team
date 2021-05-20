@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio, only: [:show, :edit, :update]
+  before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
   def index
     @portfolios = Portfolio.all
   end
@@ -23,17 +23,20 @@ class PortfoliosController < ApplicationController
   end
 
   def edit
-    
+    redirect_to portfolios_path
   end
 
   def update
-    
     if @portfolio.update(portfolio_params)
       flash[:notice] ="You have seccessfully updated your portfolio"
       redirect_to @portfolio
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @portfolio.destroy
   end
 
   private
