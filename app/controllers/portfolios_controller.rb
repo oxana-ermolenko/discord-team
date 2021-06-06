@@ -14,16 +14,17 @@ class PortfoliosController < ApplicationController
 
   def create
     @portfolio = Portfolio.new(portfolio_params)
+    @portfolio.user = current_user
     if @portfolio.save
       flash[:notice] = "You have successfully create a portfolio"
-      redirect_to portfolios_path
+      redirect_to @portfolio      
     else
       render 'new'
     end
   end
 
   def edit
-    redirect_to portfolios_path
+    
   end
 
   def update
@@ -37,6 +38,7 @@ class PortfoliosController < ApplicationController
 
   def destroy
     @portfolio.destroy
+    
   end
 
   private
@@ -47,4 +49,5 @@ class PortfoliosController < ApplicationController
   def set_portfolio
     @portfolio = Portfolio.find(params[:id])
   end
+  
 end
