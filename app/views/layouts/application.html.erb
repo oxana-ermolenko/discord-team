@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Discord</title>
+    <%= favicon_link_tag %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,8 +12,11 @@
 
   <body>
     <%= render 'layouts/nav' %>
+    
     <main>
       <div class="container">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
         <%= yield %>
       </div>
     </main>

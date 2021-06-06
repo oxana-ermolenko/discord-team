@@ -20,10 +20,19 @@
             </div>
           </div>
           <div class="row">
+            
+            
+            <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+              <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text } %>
+            <% end %>
+           
+          </div>
+          <div class="row">
             <div class="input-field col s12">
               <%= f.button(@portfolio.new_record? ? '<i class="material-icons right">arrow_forward</i>Add'.html_safe : '<i class="material-icons right">arrow_forward</i>Update'.html_safe, class: "waves-effect waves-light btn right") %>
             </div>
           </div>
+          
         <% end %>
         </div>
       </div>

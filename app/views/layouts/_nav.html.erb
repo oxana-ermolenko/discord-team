@@ -1,32 +1,32 @@
 <header>
   <!-- Dropdown Structure -->
   <ul id="dropdown1" class="dropdown-content">
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
+    <%= link_to "Sign up", new_user_registration_path, class: "dropdown-text" %>
+    <%= link_to "Login", new_user_session_path, class: "dropdown-text" %>
     <li class="divider"></li>
-    <li><a href="#!">three</a></li>
+    <%= link_to "Logout", destroy_user_session_path, mehtod: :delete, class: "dropdown-text" %> 
   </ul>
   <ul id="dropdown2" class="dropdown-content">
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
+    <%= link_to "Sign up", new_user_registration_path, class: "dropdown-text" %>
+    <%= link_to "Login", new_user_session_path, class: "dropdown-text" %>
     <li class="divider"></li>
-    <li><a href="#!">three</a></li>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-text" %> 
   </ul>
   <nav >
     <div class="container">
-        <div class="nav-wrapper orange accent-4">
+        <div class="nav-wrapper">
         <%= link_to "Discord", root_path, class:"brand-logo" %>        
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><%= link_to "About", about_path %></li>
             <li><%= link_to "Portfolios", portfolios_path %></li>
             <!-- Dropdown Trigger -->
-            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
           </ul>
           <ul class="sidenav" id="mobile-demo">
             <li><%= link_to "About", about_path %></li>
             <li><%= link_to "Portfolios", portfolios_path %></li>
-            <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Account<i class="material-icons right">arrow_drop_down</i></a></li>
           </ul>
         </div>
       </div>

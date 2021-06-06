@@ -1,5 +1,5 @@
 @import "materialize/components/color-variables";
-$primary-color: color("grey", "base") !default;
+$primary-color: color("teal", "base") !default;
 $secondary-color: color("teal", "base") !default;
 @import "materialize";
 
@@ -16,4 +16,8 @@ main {
 
 .sign-up-form {
   padding-top: 30px;
+}
+
+.dropdown-text {
+  color: black;
 }
