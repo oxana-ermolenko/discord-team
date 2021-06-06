@@ -43,7 +43,7 @@ class PortfoliosController < ApplicationController
 
   private
   def portfolio_params
-    params.require(:portfolio).permit(:name, :description)
+    params.require(:portfolio).permit(:name, :description, category_ids: [])
   end
 
   def set_portfolio

@@ -24,5 +24,8 @@ $(document).on('turbolinks:load', function() {
   $('#fade-out-target').fadeOut(4000);
   $('.carousel').carousel();
 });
+$(document).ready('turbolinks:load',function(){
+  $('select').formSelect();
+});
 
       
